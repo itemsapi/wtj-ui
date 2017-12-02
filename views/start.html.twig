@@ -1,0 +1,28 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+
+<div class="page-header" style="margin-top: 0;">
+
+  <h2 style="margin-top: 0;">Domains enrichment</h2>
+  <h4 class="text-left text-muted">Put list of domains and get an useful information about them </h4>
+</div>
+
+<h3 class="text-left">Process data</h3>
+
+<form action="/" method="POST">
+  <div class="form-group">
+    <label>List of domains</label>
+    <textarea class="form-control" name="body" rows="3"></textarea>
+  </div>
+
+  {% if csv %}
+  <div class="form-group">
+    <label>Result</label>
+    <textarea class="form-control" name="result" rows="3">{{ csv }}</textarea>
+  </div>
+  {% endif %}
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+
+{% endblock %}

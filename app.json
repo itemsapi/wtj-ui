@@ -1,0 +1,9 @@
+{
+  "name": "wtj-ui",
+  "success_url": "/",
+  "env": {
+    "NODE_ENV": "production",
+    "PORT": "3000"
+  },
+  "keywords": ["processing domains"]
+}

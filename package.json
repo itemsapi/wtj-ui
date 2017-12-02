@@ -1,0 +1,30 @@
+{
+  "name": "wtj-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Mateusz Rzepa",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itemsapi/wtj-ui.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/itemsapi/wtj-ui/issues"
+  },
+  "homepage": "https://github.com/itemsapi/wtj-ui#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "json2csv": "^3.11.5",
+    "lodash": "^4.17.4",
+    "morgan": "^1.9.0",
+    "nunjucks": "^3.0.1",
+    "website-to-json": "^1.0.21",
+    "winston": "^2.4.0"
+  }
+}
