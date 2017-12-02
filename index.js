@@ -31,19 +31,26 @@ app.get(['/'], function(req, res, next) {
  * process data
  */
 app.post(['/'], function(req, res, next) {
-  console.log(req.body)
 
-  var list = _.chain(req.body.body)
-  .split('\r\n')
-  .filter(v => {
-    return !!v;
-  })
-  .map(v => {
-    return service.normalizeUrl(v);
-  })
-  .value();
+  return service.inputToJSON(req.body.body)
+  .then(r => {
 
-  console.log(list.length);
+    console.log('Processing ' + r.length + ' urls');
+    return service.processDomains(r)
+  })
+  .then(r => {
+
+    var csv = json2csv({
+      data: r
+    });
+
+    //console.log(csv);
+
+    return res.render('start', {
+      csv: csv,
+      json: r
+    });
+  })
 
   service.processDomains(list)
   .then(r => {

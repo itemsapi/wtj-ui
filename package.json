@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "author": "Mateusz Rzepa",
+  "author": "",
   "scripts": {
     "start": "node index.js"
   },
@@ -11,7 +11,6 @@
     "type": "git",
     "url": "git+https://github.com/itemsapi/wtj-ui.git"
   },
-  "author": "",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/itemsapi/wtj-ui/issues"
@@ -19,6 +18,7 @@
   "homepage": "https://github.com/itemsapi/wtj-ui#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "csvtojson": "^1.1.9",
     "express": "^4.16.2",
     "json2csv": "^3.11.5",
     "lodash": "^4.17.4",
